@@ -1,0 +1,41 @@
+<resources>
+    <string name="app_name">Appsylum</string>
+    <string name="title_activity_add_event">AddEvent</string>
+    <string-array name="days">
+        <item>"Monday"</item>
+        <item>"Tuesday"</item>
+        <item>"Wednesday"</item>
+        <item>"Thursday"</item>
+        <item>"Friday"</item>
+        <item>"Saturday"</item>
+        <item>"Sunday"</item>
+    </string-array>
+    <string-array name="monday_events">
+        <item>"Basketball"</item>
+        <item>"English Class"</item>
+    </string-array>
+    <string-array name="tuesday_events">
+        <item>"Arts and Crafts"</item>
+    </string-array>
+    <string-array name="wednesday_events">
+        <item>"Housing Advice"</item>
+        <item>"Women's Drop In"</item>
+    </string-array>
+    <string-array name="thursday_events">
+        <item>"3 Cookery"</item>
+        <item>"4 Football"</item>
+        <item>"2 Group Therapy"</item>
+        <item>"1 Mother" &amp; "Baby"</item>
+    </string-array>
+    <string-array name="friday_events">
+        <item>"Open Mic Night"</item>
+    </string-array>
+    <string-array name="saturday_events">
+        <item>"Asylum Advice"</item>
+        <item>"Nature Walk"</item>
+    </string-array>
+    <string-array name="sunday_events">
+        <item>"Coding Workshop"</item>
+    </string-array>
+
+</resources>

@@ -1,0 +1,83 @@
+Index: app/src/main/java/com/antinvent/appsylum/HomeScreen.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- app/src/main/java/com/antinvent/appsylum/HomeScreen.java	(revision )
++++ app/src/main/java/com/antinvent/appsylum/HomeScreen.java	(revision )
+@@ -9,6 +9,7 @@
+ import android.widget.Button;
+ import android.widget.ExpandableListView;
+ import android.widget.ListView;
++import android.widget.Switch;
+ import android.widget.TextView;
+ import android.view.View;
+ import android.view.Menu;
+@@ -46,7 +47,7 @@
+         }
+ 
+         ExpandableListView ttList = (ExpandableListView) findViewById(R.id.ttList);
+-        List<String> dayNames = new ArrayList<>();
++        /*List<String> dayNames = new ArrayList<>();
+         List<String> mondayEvents = new ArrayList<>();
+         List<String> tuesdayEvents = new ArrayList<>();
+         List<String> wednesdayEvents = new ArrayList<>();
+@@ -54,8 +55,18 @@
+         List<String> fridayEvents = new ArrayList<>();
+         List<String> saturdayEvents = new ArrayList<>();
+         List<String> sundayEvents = new ArrayList<>();
+-        HashMap<String, List<String>> eventsHashMap = new HashMap<>();
++        HashMap<String, List<String>> eventsHashMap = new HashMap<>();*/  //commented out 25/04/17
+ 
++        List<EventListing> dayNames = new ArrayList<>();
++        List<EventListing> mondayEvents = new ArrayList<>();
++        List<EventListing> tuesdayEvents = new ArrayList<>();
++        List<EventListing> wednesdayEvents = new ArrayList<>();
++        List<EventListing> thursdayEvents = new ArrayList<>();
++        List<EventListing> fridayEvents = new ArrayList<>();
++        List<EventListing> saturdayEvents = new ArrayList<>();
++        List<EventListing> sundayEvents = new ArrayList<>();
++        HashMap<String, List<EventListing>> eventsHashMap = new HashMap<>();
++
+         String dayNamesArray[] = getResources().getStringArray(R.array.days);
+         String mondayEventsArray[] = getResources().getStringArray(R.array.monday_events);
+         String tuesdayEventsArray[] = getResources().getStringArray(R.array.tuesday_events);
+@@ -65,8 +76,37 @@
+         String saturdayEventsArray[] = getResources().getStringArray(R.array.saturday_events);
+         String sundayEventsArray[] = getResources().getStringArray(R.array.sunday_events);
+ 
+-        for(String dayName : dayNamesArray){
++        /*for(String dayName : dayNamesArray){
+             dayNames.add(dayName);
++        }*/
++        for(String dayName : dayNamesArray){
++            EventListing eventListing;
++            EventListing.Day dayConvert;
++            switch (dayName){
++                case "Monday":
++                    dayConvert = EventListing.Day.MONDAY;
++                    eventListing(dayConvert, 12, 30, );
++                    break;
++                case "Tuesday":
++                    dayConvert = EventListing.Day.TUESDAY;
++                    break;
++                case "Wednesday":
++                    dayConvert = EventListing.Day.WEDNESDAY;
++                    break;
++                case "Thursday":
++                    dayConvert = EventListing.Day.THURSDAY;
++                    break;
++                case "Friday":
++                    dayConvert = EventListing.Day.FRIDAY;
++                    break;
++                case "Saturday":
++                    dayConvert = EventListing.Day.SATURDAY;
++                    break;
++                case "Sunday":
++                    dayConvert = EventListing.Day.SUNDAY;
++                    break;
++            }
++            dayNames.add(eventListing);
+         }
+ 
+         for(String eventName : mondayEventsArray){
